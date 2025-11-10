@@ -13,9 +13,9 @@ public interface MemberMapper {
     // 이메일 중복 체크
     int countByEmail(@Param("email") String email);
 
-    // 이메일로 회원 조회
-    MemberVO findByEmail(@Param("email") String email);
-
     // ID로 회원 조회
     MemberVO findById(@Param("userId") Integer userId);
+
+    // 이메일로 회원 조회 (로그인용) ← 추가
+    MemberVO findByEmail(@Param("email") String email);
 }
